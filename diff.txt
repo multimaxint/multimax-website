@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multimax International Ltd</title>
+  <style>
+    :root {
+      --main-color: #0a4d8c;
+      --accent: #007BFF;
+      --bg-light: #f9f9f9;
+      --text-dark: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--main-color);
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0a4d8c, #007BFF);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: var(--main-color);
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--main-color);
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      margin: 6px 0;
+    }
+
+    footer {
+      background: #0a4d8c;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: var(--main-color);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="nav-logo">Multimax Ltd</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul id="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Multimax International Ltd</h1>
+    <p>Flexible Packaging Products for a Sustainable Future</p>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>
+      Founded in 2006, Multimax International Ltd is a global leader in plastic and biodegradable packaging solutions. With 200+ employees and 64+ machines in a 33,000 sq ft facility, we serve clients across 25+ countries with a production capacity of 6,000 metric tons annually.
+    </p>
+  </section>
+
+  <section class="section" id="products">
+    <h2>Our Products</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Food Packaging</h3>
+        <p>T-shirt bags, Ice bags, Poly tubes, Bread bags, Roll bags.</p>
+      </div>
+      <div class="card">
+        <h3>Trash Bags</h3>
+        <p>Star-seal, flat, drawstring, C-fold, E-fold, on rolls.</p>
+      </div>
+      <div class="card">
+        <h3>Retail Bags</h3>
+        <p>Loop handle, Die-cut, Shopping bags.</p>
+      </div>
+      <div class="card">
+        <h3>Industrial Use</h3>
+        <p>Pallet cover, Poly sheeting, Tubing, Construction overlays.</p>
+      </div>
+      <div class="card">
+        <h3>E-commerce</h3>
+        <p>Poly mailers for secure delivery & custom packaging.</p>
+      </div>
+      <div class="card">
+        <h3>Eco-Friendly</h3>
+        <p>Biodegradable bags with D2W, OXO, EPI, CPFG.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="grid">
+      <div class="card contact-info">
+        <h3>Factory</h3>
+        <p>Plot #78 (Ext), DEPZ, Savar, Dhaka</p>
+        <p>📞 +8801716545722</p>
+        <p>✉️ Multimax.depz78@gmail.com</p>
+      </div>
+      <div class="card contact-info">
+        <h3>Head Office</h3>
+        <p>House #79, Road #07, Sector #04, Uttara, Dhaka</p>
+        <p>📞 +8801776568310</p>
+        <p>✉️ Multimax.depz@78@gmail.com</p>
+      </div>
+      <div class="card contact-info">
+        <h3>USA Office</h3>
+        <p>8260 NW 27th Pl, Sunrise, FL-33</p>
+        <p>📞 Cell: 954-907-9246</p>
+        <p>📞 Office: 954-909-4022</p>
+        <p>✉️ nilu01818@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Multimax International Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
